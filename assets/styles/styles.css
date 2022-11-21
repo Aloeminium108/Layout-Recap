@@ -1,0 +1,85 @@
+body {
+    margin: 0px;
+    color: #333;
+}
+
+main {
+    margin: auto;
+    width: 970px;
+}
+
+a {
+    text-decoration: none;
+    color: #478061;
+}
+
+a:hover {
+    color: black;
+}
+
+nav {
+    position: sticky;
+    top: 0px;
+    background-color: #478061;
+    margin-bottom: 20px;
+}
+
+nav li {
+    display: inline;
+    margin: 0px;
+}
+
+nav ul {
+    margin: auto;
+    padding: 15px;
+    width: fit-content;
+}
+
+footer div {
+    margin: auto;
+    width: fit-content;
+}
+
+footer div p {
+    text-align: center;
+}
+
+.navlink {
+    color: white;
+    text-align: center;
+    padding: 15px;
+}
+
+.navlink:hover {
+    background-color: black;
+    color: white;
+}
+
+.column { 
+    vertical-align: top;
+    display: inline-block;
+    
+}
+
+.logo {
+    position: relative;
+    margin-top: 30px;
+    margin-left: 30px;
+    margin-right: 30px;
+}
+
+.centered {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.intro {
+    width: 700px;
+}
+
+.card {
+    padding: 1%;
+    width: 30%;
+}
