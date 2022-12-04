@@ -19,6 +19,7 @@ a:hover {
 
 nav {
     position: sticky;
+    height: 50px;
     top: 0px;
     background-color: #478061;
     margin-bottom: 20px;
@@ -82,4 +83,8 @@ footer div p {
 .card {
     padding: 1%;
     width: 30%;
+}
+
+#void_fg {
+    width: 174px;
 }

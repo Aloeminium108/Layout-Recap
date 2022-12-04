@@ -43,25 +43,25 @@
                 <div class="column logo">
                     <img src="./assets/images/void_bg.png" alt="Void Linux logo">
                     <div class="centered">
-                        <h1>AloeS</h1>
+                        <img id="void_fg" src="./assets/images/void_fg.png" alt="Void Linux Logo">
                     </div>
                 </div>
                 <div class="column intro">
-                    <h2>The Aloe (Linux) Distribution</h2>
+                    <h2>The Void (Linux) Distribution</h2>
                     <p>
-                        AloeS is a purposeless operating system, based on a fork of the Linux kernel rewritten in Malbolge. Its package system allows you to install and remove software if you ask nicely; software is provided in ternary packages or can be built directly from sources with the help of a Malbolge compiler (Not included).
+                        Void is a general purpose operating system, based on the monolithic <a href="https://www.kernel.org/">Linux</a> kernel. Its package system allows you to quickly install, update and remove software; software is provided in binary packages or can be built directly from sources with the help of the XBPS source packages collection.
                     </p>
                     <p>
-                        It is available for one platform and one platform only. No, we will not be porting it to anything besides the Nintendo DS. Stop asking.
+                        It is available for a variety of platforms. Software packages can be built natively or cross compiled through the <a href="https://github.com/void-linux/void-packages">XBPS source packages collection.</a>
                     </p>
                     <p>
-                        Please do not follow us anywhere. The dev team are a paranoid bunch who wish to be left alone.
+                        Follow us on <a href="https://twitter.com/voidlinux">Twitter</a>, visit the <a href="ircs://irc.libera.chat/#voidlinux">#voidlinux</a> IRC channel on <a href="https://libera.chat/">libera.chat</a>, and join the <a href="https://www.reddit.com/r/voidlinux/">Void Linux subreddit</a>.
                     </p>
                     <p>
-                        Our build server is updated every 20 years.
+                        Visit the <a href="https://build.voidlinux.org/console">Void build server console</a> for package build status updates.
                     </p>
                     <p>
-                        Contribute to the AloeS project by making sacrifices before a shrine of the blood goddess. More information can be found <a href="https://docs.voidlinux.org/contributing/index.html">in the Handbook</a>.
+                        Contribute to the Void Linux project by <a href="https://github.com/void-linux/void-packages/blob/master/CONTRIBUTING.md">adding and updating packages</a> and <a href="https://github.com/void-linux/void-docs/blob/master/CONTRIBUTING.md">extending the documentation</a>. More information can be found <a href="https://docs.voidlinux.org/contributing/index.html">in the Handbook</a>.
                     </p>
                 </div> 
             </div>
@@ -74,42 +74,57 @@
                 <div class="column card">
                     <h3>Not a fork!</h3>
                     <p>
-                        It's a spoon!
+                        Void Linux is an independent distribution, developed entirely by volunteers.
                     </p>
                     <p>
-                        Just kidding. Unlike trillions of other existing distros, AloeS is not a modification of an existing distribution. We don't actually know who wrote AloeS. After drawing a summoning circle around our intern's laptop and chanting incantations from the Handbook, the source code appeared in a text document labelled "Beware". 
-                    </p>
-                </div>
-                <div class="column card">
-                    <h3>Unstable rolling release</h3>
-                    <p>
-                        Every single update so far has caused major breakages, but we are bound by oaths to the blood goddess to push every package update that appears on Jim's laptop.
+                        Unlike trillions of other existing distros, Void is not a modification of an existing distribution. Void's package manager and build system have been written from scratch.
                     </p>
                 </div>
                 <div class="column card">
-                    <h3>Run</h3>
+                    <h3>Stable rolling release</h3>
                     <p>
-                        Don't look back.
+                        Void focuses on stability, rather than on being bleeding-edge. Install once, update routinely and safely.
+                    </p>
+                    <p>
+                        Thanks to our continuous build system, new software is built into binary packages as soon as the changes are pushed to the void-packages repository.
+                    </p>
+                </div>
+                <div class="column card">
+                    <h3>runit</h3>
+                    <p>
+                        We use runit as the init system and service supervisor.
+                    </p>
+                    <p>
+                        runit is a simple and effective approach to initialize the system with reliable service supervision. Refer to the Void Handbook for an introduction.
                     </p>
                 </div>
             </div>
             <div class="row">
                 <div class="column card">
-                    <h3>Diverse library</h3>
+                    <h3>C library diversity</h3>
                     <p>
-                        There are no limits to the arcane. Any piece of software which could possibly make your life worse is in the AloeS repositories.
+                        Void Linux supports both the musl and GNU libc implementations, patching incompatible software when necessary and working with upstream developers to improve the correctness and portability of their projects.
                     </p>
                 </div>
                 <div class="column card">
-                    <h3>Steve</h3>
+                    <h3>XBPS</h3>
                     <p>
-                        Steve is our package manager. We pay him $16 an hour and he has a god complex. 
+                        xbps is the native system package manager, written from scratch with a 2-clause BSD license.
+                    </p>
+                    <p>
+                        XBPS allows you to quickly install/update/remove software in your system and features detection of incompatible shared libraries and dependencies while updating or removing packages (among others). Refer to the Handbook for an overview.
                     </p>
                 </div>
                 <div class="column card">
-                    <h3>Semi-functional build system</h3>
+                    <h3>xbps-src</h3>
                     <p>
-                        The source code for every package is written in Malbolge. Writing a functional Malbolge compiler <em>in</em> Malbolge is nigh impossible. We have made little progress in creating a build system, but we'd like to see any of you do better. It's good enough.
+                        xbps-src is the xbps package builder, written from scratch with a 2-clause BSD license.
+                    </p>
+                    <p>
+                        This builds the software in containers through the use of Linux namespaces, providing isolation of processes and bind mounts (among others). No root required!
+                    </p>
+                    <p>
+                        Additionally, xbps-src can build natively or cross compile for the target machine, and supports multiple C libraries (glibc and musl currently).
                     </p>
                 </div>
             </div>
@@ -122,13 +137,13 @@
                     <iframe id="twitter-widget-0" scrolling="no" frameborder="0" allowtransparency="true" allowfullscreen="true" class="" style="position: static; visibility: visible; height: 300px; display: block; flex-grow: 1;" title="Twitter Timeline" src="https://syndication.twitter.com/srv/timeline-profile/screen-name/VoidLinux?dnt=false&amp;embedId=twitter-widget-0&amp;features=eyJ0ZndfdGltZWxpbmVfbGlzdCI6eyJidWNrZXQiOlsibGlua3RyLmVlIiwidHIuZWUiLCJ0ZXJyYS5jb20uYnIiLCJ3d3cubGlua3RyLmVlIiwid3d3LnRyLmVlIiwid3d3LnRlcnJhLmNvbS5iciJdLCJ2ZXJzaW9uIjpudWxsfSwidGZ3X2hvcml6b25fdGltZWxpbmVfMTIwMzQiOnsiYnVja2V0IjoidHJlYXRtZW50IiwidmVyc2lvbiI6bnVsbH0sInRmd190d2VldF9lZGl0X2JhY2tlbmQiOnsiYnVja2V0Ijoib24iLCJ2ZXJzaW9uIjpudWxsfSwidGZ3X3JlZnNyY19zZXNzaW9uIjp7ImJ1Y2tldCI6Im9uIiwidmVyc2lvbiI6bnVsbH0sInRmd19jaGluX3BpbGxzXzE0NzQxIjp7ImJ1Y2tldCI6ImNvbG9yX2ljb25zIiwidmVyc2lvbiI6bnVsbH0sInRmd190d2VldF9yZXN1bHRfbWlncmF0aW9uXzEzOTc5Ijp7ImJ1Y2tldCI6InR3ZWV0X3Jlc3VsdCIsInZlcnNpb24iOm51bGx9LCJ0Zndfc2Vuc2l0aXZlX21lZGlhX2ludGVyc3RpdGlhbF8xMzk2MyI6eyJidWNrZXQiOiJpbnRlcnN0aXRpYWwiLCJ2ZXJzaW9uIjpudWxsfSwidGZ3X2V4cGVyaW1lbnRzX2Nvb2tpZV9leHBpcmF0aW9uIjp7ImJ1Y2tldCI6MTIwOTYwMCwidmVyc2lvbiI6bnVsbH0sInRmd19kdXBsaWNhdGVfc2NyaWJlc190b19zZXR0aW5ncyI6eyJidWNrZXQiOiJvbiIsInZlcnNpb24iOm51bGx9LCJ0ZndfdmlkZW9faGxzX2R5bmFtaWNfbWFuaWZlc3RzXzE1MDgyIjp7ImJ1Y2tldCI6InRydWVfYml0cmF0ZSIsInZlcnNpb24iOm51bGx9LCJ0Zndfc2hvd19ibHVlX3ZlcmlmaWVkX2JhZGdlIjp7ImJ1Y2tldCI6Im9uIiwidmVyc2lvbiI6bnVsbH0sInRmd190d2VldF9lZGl0X2Zyb250ZW5kIjp7ImJ1Y2tldCI6Im9uIiwidmVyc2lvbiI6bnVsbH19&amp;frame=false&amp;hideBorder=true&amp;hideFooter=false&amp;hideHeader=false&amp;hideScrollBar=true&amp;lang=en&amp;maxHeight=300px&amp;origin=https%3A%2F%2Fvoidlinux.org%2F&amp;sessionId=f791ead4b364d08aadc7e6850dfa8af6fb382101&amp;showHeader=true&amp;showReplies=false&amp;theme=light&amp;transparent=true&amp;widgetsVersion=a3525f077c700%3A1667415560940"></iframe>
                 </div>
                 <div class="column card">
-                    <h3>aloes-packages changes</h3>
+                    <h3>void-packages changes</h3>
                     <ul id="packages">
 
                     </ul>
                 </div>
                 <div class="column card">
-                    <h3>Steve updates</h3>
+                    <h3>xbps changes</h3>
                     <ul id="steve">
 
                     </ul>
@@ -141,28 +156,38 @@
             <h2>Recent news</h2>
             <hr>
             <div>
-                <h4>November 12, 2022</h4>
+                <h4>December 1, 2022</h4>
                 <h3>
-                    <a href="https://scp-wiki.wikidot.com/scp-007-j">Bake Sale!</a>
+                    <a href="https://voidlinux.org/news/2022/12/repo-us-issues.html">US Mirror Issues</a>
                 </h3>
                 <p>
-                    To help recoup our losses after last Thursday, we've decided to host a bake sale! Honestly more teams working on free open-source software should do this. Even if you don't make enough money to stay afloat, you get to eat cookies. Morale has never been higher.
-                </p>
-                <p>
-                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Corporis eos suscipit quia, adipisci hic tempora in atque ut, iste itaque mollitia. Ad alias iure incidunt quidem quaerat id cupiditate quisquam reiciendis exercitationem accusantium odio quam nesciunt, officiis dolores mollitia veniam earum voluptates dolore! Molestiae inventore, aliquid dolorem neque exercitationem cupiditate dicta hic eveniet vero eum maiores explicabo consequatur. Fugiat hic similique quis nihil commodi quos consectetur modi amet aliquid! Ad, quo asperiores tempora autem sed quod rerum! Quis labore sequi delectus qui ab? Aliquid, in! Cumque numquam, omnis doloremque, impedit quam animi similique rem et minima facilis ducimus id facere.
+                    The US mirror, repo-us.voidlinux.org, is currently having hardware issues and is no longer syncing with the other mirrors for the time being. Until this is fixed, switching to another mirror is recommended. There are several other mirrors located in the US that are still operational.
                 </p>
             </div>
             <div>
-                <h4>November 10, 2022</h4>
+                <h4>October 16, 2022</h4>
                 <h3>
-                    <a href="https://scp-wiki.wikidot.com/shaggydredlocks-proposal">Armageddon</a>
+                    <a href="https://voidlinux.org/news/2022/10/new-images.html">New Images (October 2022 Edition)</a>
                 </h3>
                 <p>
-                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Corporis eos suscipit quia, adipisci hic tempora in atque ut, iste itaque mollitia. Ad alias iure incidunt quidem quaerat id cupiditate quisquam reiciendis exercitationem accusantium odio quam nesciunt, officiis dolores mollitia veniam earum voluptates dolore! Molestiae inventore, aliquid dolorem neque exercitationem cupiditate dicta hic eveniet vero eum maiores explicabo consequatur. Fugiat hic similique quis nihil commodi quos consectetur modi amet aliquid! Ad, quo asperiores tempora autem sed quod rerum! Quis labore sequi delectus qui ab? Aliquid, in! Cumque numquam, omnis doloremque, impedit quam animi similique rem et minima facilis ducimus id facere.
+                    We’re pleased to announce that the 20221001 image set has been promoted to current and is now generally available.
                 </p>
                 <p>
-                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolores labore blanditiis non quaerat, doloremque mollitia sequi qui nihil accusamus fuga vitae velit tempore! Alias quasi iure deserunt ratione, obcaecati consectetur.
+                    You can find the new images on our downloads page and on our many mirrors.
                 </p>
+                <p>
+                    Special thanks for this image set goes out to @CameronNemo for work in fixing some of the issues with networking in the installer and @paper42 for various improvements to the live image contents.
+                </p>
+                <p>
+                    Also in this release, the Raspberry Pi platform images are now condensed into one image per architecture. See here for more details about which image to use for which Raspberry Pi model.
+                </p>
+                <p>
+                    You may verify the authenticity of the images by following the instructions on the downloads page, and using the following signify key information:
+                </p>
+                <code>
+                    untrusted comment: This key is only valid for images with date 20221001. public key
+                    RWQ0DEc5FwYgp8wuGTRe3IWJGagpbeOpPqfSQbPIJie9GP8oBybejTqs
+                </code>
             </div>
         </section>
         <hr>
@@ -171,7 +196,10 @@
     <footer>
         <div>
             <p>
-                Copyright 2022 AloeS Contributors
+                Copyright 2022 <a href="https://github.com/orgs/void-linux/people">VoidLinux Contributers</a>
+            </p>
+            <p>
+                Copyright 2008-2018 <a href="https://gitlab.com/xtraeme"></a> and contributors
             </p>
             <p>
                 Linux® is a registered trademark of Linus Torvalds (<a href="https://www.linuxfoundation.org/legal/the-linux-mark">info</a>)
