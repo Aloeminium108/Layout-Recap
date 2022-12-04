@@ -12,7 +12,10 @@ body {
 
 main {
     margin: auto;
-    width: 970px;
+    width: 1140px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
 }
 
 h2 {
@@ -103,7 +106,7 @@ hr {
     position: absolute;
     top: 50%;
     left: 50%;
-    transform: translate(-50%, -50%);
+    transform: translate(-76%, -92%);
 }
 
 .intro {
@@ -136,6 +139,21 @@ hr {
 
 .column.logo:hover > #void_bg {
     transform: rotate(360deg);
+}
+
+.row {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+
+.column.intro {
+    flex-grow: 3;
+}
+
+.column.logo {
+    flex-grow: 2;
 }
 
 @media (max-width: 767px) {
