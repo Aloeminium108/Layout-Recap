@@ -52,17 +52,6 @@ nav {
     margin-bottom: 20px;
 }
 
-nav li {
-    display: inline;
-    margin: 0px;
-}
-
-nav ul {
-    margin: auto;
-    padding: 15px;
-    width: fit-content;
-}
-
 footer {
     width: 730px;
     margin: auto;
@@ -81,7 +70,18 @@ hr {
     border-radius: 4px;
 }
 
-.navlink {
+.navbar {
+    height: 100%;
+    width: 1140px;
+    margin: auto;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: right;
+    align-items: center;
+}
+
+.navlink a {
     color: white;
     text-align: center;
     padding: 15px;
