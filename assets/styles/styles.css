@@ -63,18 +63,22 @@ nav ul {
     width: fit-content;
 }
 
-footer div {
+footer {
+    width: 730px;
     margin: auto;
-    width: fit-content;
-}
-
-footer div p {
     text-align: center;
 }
 
 hr {
     border: 0;
     border-top: 1px solid #eee;
+}
+
+.code {
+    padding: 10px;
+    background-color: #f5f5f5;
+    border: 1px solid #ccc;
+    border-radius: 4px;
 }
 
 .navlink {
