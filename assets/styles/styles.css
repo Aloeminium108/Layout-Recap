@@ -1,11 +1,35 @@
+@font-face {
+    font-family: 'ubuntu';
+    src: url('../fonts/Ubuntu-Light.ttf');
+}
+
 body {
     margin: 0px;
     color: #333;
+    font-family: ubuntu;
+    font-size: 14px;
 }
 
 main {
     margin: auto;
     width: 970px;
+}
+
+h2 {
+    font-size: 30px;
+}
+
+h3 {
+    font-size: 24px;
+}
+
+h4 {
+    font-size: 18px;
+}
+
+h1, h2, h3, h4, h5, h6 {
+    font-weight: 500;
+    color: black;
 }
 
 a {
@@ -49,6 +73,7 @@ footer div p {
     color: white;
     text-align: center;
     padding: 15px;
+    font-size: 1.2em;
 }
 
 .navlink:hover {
@@ -83,6 +108,17 @@ footer div p {
 .card {
     padding: 1%;
     width: 30%;
+}
+
+.fa-solid.fa-rss {
+    color: white;
+    background-color: #478061;
+    border-radius: 5px;
+    padding: 4px 5px 4px 5px;
+}
+
+.fa-solid.fa-rss:hover {
+    background-color: black;
 }
 
 #void_fg {
