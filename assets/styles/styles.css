@@ -69,6 +69,11 @@ footer div p {
     text-align: center;
 }
 
+hr {
+    border: 0;
+    border-top: 1px solid #eee;
+}
+
 .navlink {
     color: white;
     text-align: center;
@@ -123,4 +128,16 @@ footer div p {
 
 #void_fg {
     width: 174px;
+}
+
+#void_bg {
+    transition: transform 2s ease;
+}
+
+.column.logo:hover > #void_bg {
+    transform: rotate(360deg);
+}
+
+@media (max-width: 767px) {
+
 }
