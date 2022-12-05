@@ -1,3 +1,26 @@
+var toggle = false;
+
+function navButtonClick() {
+    if (toggle) {
+        document.getElementById("navbutton").setAttribute("toggled", "off");
+        const navbar = document.getElementById("navbar");
+        navbar.setAttribute("class", "navbar");
+        const navlinks = document.getElementsByClassName("navlink");
+        for (var i = 0; i < navlinks.length; i++) {
+            navlinks[i].setAttribute("class", "navlink");
+        };
+    } else {
+        document.getElementById("navbutton").setAttribute("toggled", "on");
+        const navlinks = document.getElementsByClassName("navlink");
+        for (var i = 0; i < navlinks.length; i++) {
+            navlinks[i].setAttribute("class", "navlink open");
+        }
+        const navbar = document.getElementById("navbar");
+        navbar.setAttribute("class", "navbar open");
+    };
+    toggle = !toggle;
+};
+
 const packages = document.querySelector("#packages");
 const steve = document.querySelector("#steve");
 
