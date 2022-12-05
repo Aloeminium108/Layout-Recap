@@ -33,6 +33,13 @@ h4 {
 h1, h2, h3, h4, h5, h6 {
     font-weight: 500;
     color: black;
+    margin-top: 20px;
+    margin-bottom: 10px;
+}
+
+p {
+    margin-top: 0px;
+    margin-bottom: 10px;
 }
 
 a {
@@ -55,6 +62,7 @@ nav {
 footer {
     width: 730px;
     margin: auto;
+    margin-top: 30px;
     text-align: center;
 }
 
@@ -140,10 +148,9 @@ hr {
 }
 
 .centered {
-    position: relative;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
+    position: absolute;
+    top: 0;
+    left: -15px;
 }
 
 .intro {
@@ -151,7 +158,6 @@ hr {
 }
 
 .card {
-    padding: 1%;
     width: 30%;
 }
 
@@ -191,9 +197,21 @@ hr {
 
 .column.logo {
     flex-grow: 2;
+    position: relative;
+}
+
+#twitter-widget-0 {
+    position: static; 
+    visibility: visible; 
+    height: 300px; 
+    display: block; 
+    flex-grow: 1;
 }
 
 @media (max-width: 767px) {
+    main {
+        width: 100vw;
+    }
     nav {
         height: fit-content;
     }
@@ -208,7 +226,8 @@ hr {
     .navbar.open {
         display: block;
         height: 330px;
-        margin-top: 10px;
+        padding-top: 10px;
+        border-top: 1px solid #333;
     }
     .navbutton {
         display: flex;
@@ -217,7 +236,6 @@ hr {
         align-items: center;
         width: 100%;
         height: 50px;
-        border-bottom: 1px solid #333;
     }
     #navbutton {
         display: flex;
@@ -238,5 +256,21 @@ hr {
     }
     .row {
         flex-direction: column;
+    }
+    .card {
+        width: 100vw;
+    }
+    .column.intro {
+        width: 100vw;
+    }
+    .column.logo {
+        width: fit-content;
+        margin: auto;
+    }
+    section {
+        padding: 0px 15px 0px 15px;
+    }
+    #twitter-widget-0 {
+        width: 520px;
     }
 }
